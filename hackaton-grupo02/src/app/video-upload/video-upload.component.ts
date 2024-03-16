@@ -16,6 +16,8 @@ export class VideoUploadComponent implements OnInit {
   async upload(event:any){
     const file:File = event.target.files[0];
     if(file){
+      const formData = new FormData();      
+      formData.append('file', file, file.name);
       this.uploadService.upload(file);          
     }    
   }
