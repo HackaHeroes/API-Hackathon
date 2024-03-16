@@ -1,0 +1,11 @@
+<h2>Videos gravadas</h2>
+<div *ngFor="let item of items">
+  <div class="item">
+    <p>
+      {{item.name}}
+    </p>
+    <p>
+      <img src="data:image/jpeg;base64,{{item.content}}" class="imagem" />
+    </p>
+  </div>
+</div>
